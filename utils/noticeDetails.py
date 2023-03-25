@@ -19,12 +19,7 @@ def getDetailedNotice(session, slug):
     )
 
     noticeBody = BeautifulSoup(req.content, "lxml")
-    noticeContent = (
-        noticeBody.find(class_="well well-lg col-lg-10 col-lg-offset-1 text-left")
-        .get_text()
-        .encode("ascii", "ignore")
-        .decode()
-    )  # encode decode is used to strip any non-ascii characters from the notice content
+    noticeContent = noticeBody.find(class_="well well-lg col-lg-10 col-lg-offset-1 text-left")
 
     noticeDate = noticeBody.find(class_="btn btn-primary").get_text()[6:]
     noticePostedBy = noticeBody.find(class_="btn btn-success").get_text()[11:]

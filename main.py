@@ -9,12 +9,14 @@ def mainLoop():
     Get the latest notice, and mail it if not done so already.
     """
 
+    print("Fetching latest notice...")
     notice = getLatestNotice()
     if not isMailSent(notice):
         sendEmail(notice)
-        print(f"Emails sent!\nNotice: {notice['title']}")
+        print(f"New notice found... Emails sent!\nNotice: {notice['title']}")
     else:
         print("Latest notice mailed already!")
+    print("Waiting until next loop...")
 
 
 consecutiveErrors = 0
