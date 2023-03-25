@@ -17,7 +17,8 @@ def getLatestNotice():
 
     isLoggedIn = login(session, data["loginId"], data["loginPass"])
     if not isLoggedIn:
-        return False
+        print("Invalid login credentials!")
+        quit()
 
     notices = getAllNotices(session)
     latestNotice = getDetailedNotice(session, notices[0])
