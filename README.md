@@ -7,7 +7,7 @@
 
 ---
 
-![](/screenshot.jpg)
+![](/documentation/screenshot.jpg)
 
 </details>
 
