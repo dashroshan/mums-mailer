@@ -2,6 +2,15 @@
 
 **Latest notices from M-UMS to college group emails**
 
+<details>
+<summary>View screenshot</summary>
+
+---
+
+![](/screenshot.jpg)
+
+</details>
+
 ## Setup
 
 Create a `config.json` file in the same directory as the `main.py` file with the below content:
